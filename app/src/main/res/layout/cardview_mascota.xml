@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvMascota"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/corner_radius_cardview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mascota1"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_barra_like"
+            android:padding="@dimen/padding_barra_like">
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hueso_blanco"/>
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/default_name"
+                android:gravity="center_vertical"
+                style="@style/textos"
+                android:layout_marginLeft="@dimen/rv_margin_side"
+                android:layout_toRightOf="@id/btnLike"/>
+
+            <ImageView
+                android:id="@+id/ivLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hueso_amarillo"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/tvNoLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/default_likes"
+                style="@style/textos"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/rv_margin_side"
+                android:layout_toLeftOf="@id/ivLikes"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
